@@ -1,0 +1,20 @@
+@startuml
+
+interface Wheel
+
+class AudiWheel
+class BenzWheel
+class BMWWheel
+
+class Client
+class CreateWheelFactory
+
+AudiWheel ..|> Wheel
+BenzWheel ..|> Wheel
+BMWWheel ..|> Wheel
+
+CreateWheelFactory <-- Client
+Wheel <.. CreateWheelFactory
+
+
+@enduml
