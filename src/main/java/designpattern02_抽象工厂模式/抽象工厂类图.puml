@@ -1,0 +1,42 @@
+@startuml
+
+interface Wheel
+
+interface Light
+
+class CreateLightFactory
+
+class CreateWheelFactory
+
+class Client
+
+abstract class CatFactory
+
+class AudiLight
+
+class BenzLight
+
+class BMWLight
+
+class AudiWheel
+
+class BenzWheel
+
+class BMWWheel
+
+
+AudiLight ..> Light
+BenzLight ..> Light
+BMWLight ..> Light
+
+AudiWheel ..> Wheel
+BenzWheel ..> Wheel
+BMWWheel ..> Wheel
+CreateLightFactory ..> CatFactory
+CreateWheelFactory ..> CatFactory
+
+CatFactory <|..  Client
+
+Light <|.. CreateLightFactory
+Wheel <|.. CreateWheelFactory
+@enduml
