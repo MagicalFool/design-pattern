@@ -26,3 +26,7 @@
 3.工厂1（造车轮厂CreateWheelFactory） \
 4.工厂2 (造灯厂CreateLightFactory) \
 3.客户 (client)
+
+#### 模式三: 单例模式
+顾明思义，不论怎么创建他都是一个对象，且唯一
+看来是与静态变量有关额
