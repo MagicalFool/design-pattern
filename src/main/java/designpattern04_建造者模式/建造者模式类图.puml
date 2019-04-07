@@ -1,0 +1,61 @@
+@startuml
+
+class Client
+
+class Product
+
+class Director
+
+abstract class Builder
+
+class ConcreteBuilder1
+
+Director <. Client
+
+Director .o Builder
+
+Client .> Product
+
+Builder <.. Client
+
+Builder .o Product
+
+
+
+
+Builder <|-- ConcreteBuilder1
+class Product{
+    private String partA;
+    private String partB;
+    private String partC;
+
+    void setPartA();
+    void setPartB();
+    void setPartC();
+
+    void show();
+
+}
+
+abstract class Builder{
+    protected Product product ;
+    abstract void buildPartA();
+    abstract void buildPartA();
+    abstract void buildPartA();
+
+    Product getResult();
+
+}
+class ConcreteBuilder1{
+    void buildPartA();
+    void buildPartB();
+    void buildPartC();
+}
+class Director{
+    privet Builder builder;
+
+    Director(Builder builder);
+    public Product getResult();
+}
+
+@enduml
