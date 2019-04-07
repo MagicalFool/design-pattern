@@ -1,0 +1,33 @@
+@startuml
+
+class Computer{
+    void start();
+    void stop();
+}
+
+class Cpu{
+    void start();
+    void stop();
+}
+
+class Disk{
+
+    void start();
+    void stop();
+}
+
+class Memory{
+    void start();
+    void stop();
+}
+
+class Client
+
+Cpu ..o Computer
+Disk ..o Computer
+Memory ..o Computer
+
+Computer <|-- Client
+
+
+@enduml
