@@ -1,0 +1,22 @@
+@startuml
+
+interface Eventable{
+    void sender();
+}
+
+class EventSender{
+    void sender();
+}
+
+class Proxy{
+   void before();
+   void sender();
+   void after();
+}
+
+Eventable <|.. EventSender
+Eventable <|.. Proxy
+
+Client ..> Proxy
+
+@enduml
