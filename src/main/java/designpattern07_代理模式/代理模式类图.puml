@@ -9,9 +9,7 @@ class EventSender{
 }
 
 class Proxy{
-   void before();
    void sender();
-   void after();
 }
 
 Eventable <|.. EventSender

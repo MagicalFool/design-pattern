@@ -1,0 +1,22 @@
+@startuml
+
+interface Eventable{
+    void method();
+}
+
+class EventSender{
+    void method();
+}
+
+class Decorator{
+   void before();
+   void method();
+   void after();
+}
+
+Eventable <|.. EventSender
+Eventable <|.. Decorator
+
+Client ..> Decorator
+
+@enduml
